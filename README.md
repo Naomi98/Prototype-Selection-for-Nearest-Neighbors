@@ -21,7 +21,7 @@ The KDTree encoder was saved in a pickel file
 
 We tuned the hyper paramters of the XGBoost classifier. Specifically, changing the following hyperparameters:
 
--> train_ratio: 0.9
+- train_ratio: 0.9
 -> ensemble_size: 20
 -> max_depth: 10
 -> eta: 0.01
