@@ -3,13 +3,14 @@ One way to speed up nearest neighbor classification is to replace the training s
 
 ## KDTree + XGBoost Submission - Binary Image Classification Model for Poverty Map Dataset by WILDS
 
-XGBoost stands for eXtreme Gradient Boosting. In this submission, the model is built on the base KDTree + XGBoost model given by the TA, for the given binary classification task. 
+XGBoost stands for eXtreme Gradient Boosting. In this submission, the model is built on the base KDTree + XGBoost model given by the TA, for the given binary classification task. Multiple changes such as data split, multiple model training, feature addition, one hot encoding, etc. were made to improve the performance of the baseline model and get a higher accuracy. The major changes has been explained as follows:
 
-### Trained the KD Tree on higher number of images (1000)
+### Trained the KD Tree on higher number of images
 
-Encoded the whole dataset
+The KDTree was trained using a higher number of images, 1000 images, from the dataset. Also, the maximum depth of the tree was increased to 10. Then the whole dataset was encoded using this trained KDTree. After encoding, we finally got an increased number of features, that is, <count> features.
 
 ### Added nightlight in the features
+The encoded data only had the information about the image but the dataframe also had additional information about the nightlight mean (given as `nl_mean`) and country labels. So, we added nightlife 
 
 ### One-Hot Encoding for the Countries
 The KDTree encoder was saved in a pickel file
